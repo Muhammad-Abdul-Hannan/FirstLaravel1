@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/CV', function () {
+//     return view('CV');
+// });
+
+// Route::view("CV", 'CV');
+
+Route::get('/CV/{name}', function ($name) {
+    return view('CV', ['name'=>$name]);
+});
